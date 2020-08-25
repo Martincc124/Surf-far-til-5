@@ -1,0 +1,13 @@
+body{  
+    background-image: url('../Images/SurfingImage.jpg');
+   
+}
+.navBar{
+    width: 100%;
+    height: 10%;
+    opacity: 50%;
+    background-color: aliceblue;
+}
+.navbar button{
+    opacity: 1;
+}
