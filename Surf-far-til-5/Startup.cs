@@ -24,7 +24,6 @@ namespace Surf_far_til_5
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseFileServer();
         }
     }
 }
