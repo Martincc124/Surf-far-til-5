@@ -15,6 +15,7 @@ namespace Surf_far_til_5
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -24,6 +25,11 @@ namespace Surf_far_til_5
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+            });
             app.UseFileServer();
         }
     }
