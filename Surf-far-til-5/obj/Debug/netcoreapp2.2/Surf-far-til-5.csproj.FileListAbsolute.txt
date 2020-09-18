@@ -43,3 +43,14 @@ C:\Users\computer\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netco
 C:\Users\computer\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.csproj.CopyComplete
 C:\Users\computer\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\computer\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Razor\Views\Login\index.cshtml.g.cs
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\bin\Debug\netcoreapp2.2\Surf-far-til-5.Views.dll
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\bin\Debug\netcoreapp2.2\Surf-far-til-5.Views.pdb
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.TagHelpers.input.cache
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.TagHelpers.output.cache
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.RazorCoreGenerate.cache
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Razor\Views\Home\index.cshtml.g.cs
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Razor\Views\Login\index.cshtml.g.cs
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.RazorTargetAssemblyInfo.cs
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.Views.pdb
+C:\Users\andre\Documents\GitHub\Surf-far-til-5\Surf-far-til-5\obj\Debug\netcoreapp2.2\Surf-far-til-5.csproj.CopyComplete

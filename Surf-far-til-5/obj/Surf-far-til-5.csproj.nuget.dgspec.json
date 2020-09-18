@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\computer\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj": {}
+    "C:\\Users\\andre\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\computer\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj": {
+    "C:\\Users\\andre\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\computer\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj",
         "projectName": "Surf-far-til-5",
-        "projectPath": "C:\\Users\\computer\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj",
-        "packagesPath": "C:\\Users\\computer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\computer\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\obj\\",
+        "projectPath": "C:\\Users\\andre\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\Surf-far-til-5.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\Documents\\GitHub\\Surf-far-til-5\\Surf-far-til-5\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -69,7 +71,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -30,22 +30,15 @@ body{
     align-items: flex-end;
     justify-content: flex-end;
 }
-.navBarWrapper button{
-    margin: 40px;
-    font-size: 20px;
-    background-color: rgba(255,255,255,0);
-    border-color: rgba(255,255,255,0);
-    color: #1d4996;
+.navBarWrapper a{
+    text-decoration:none;
+    color: red;
 }
-.navBarWrapper button:hover{
-    margin: 40px;
-    font-size: 20px;
-    background-color: rgba(255,255,255,0);
-    border-color: rgba(255,255,255,0);
-    color: #4d81dd;
+a:hover{
+    color: darkred
 }
-.navBarWrapper button:focus{
-    outline: 0;
+a:focus{ 
+    color: red;
 }
 .contentWrapper{
     width: 30%;
