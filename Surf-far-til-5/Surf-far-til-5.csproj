@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <None Include="Views\Home\index.cshtml" />
-    <None Include="wwwroot\Ressources\css\styles.css" />
     <None Include="wwwroot\Ressources\Images\Old_SurfingImage.jpg" />
     <None Include="wwwroot\Ressources\Images\SurfingImage.jpg" />
   </ItemGroup>
