@@ -1,14 +1,13 @@
-﻿@addTagHelper "*, Nicrosoft.AspNetCore.Mvc.TagHelpers"
-@model Surfapplikation.Models.LoginViewModel
+﻿@model Surfapplikation.Models.LoginViewModel
 @{
     Layout = "_Layout";
 }
 
-<fieldset class="account">
-
+<div class="account">
+    
     <h1>Login</h1>
     <br />
-    <form role="form" asp-action="Login">
+    <form role="form" asp-action="Index">
 
         <div asp-validation-summary="All" class="input-validation-error"></div>
 
@@ -49,4 +48,4 @@
         <a asp-action="Register">Create a new account</a>
     </div>
 
-</fieldset>
+</div>
