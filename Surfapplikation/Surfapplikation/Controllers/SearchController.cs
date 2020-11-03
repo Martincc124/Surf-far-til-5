@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Surfapplikation.Models;
 
 namespace Surfapplikation.Controllers
 {
@@ -14,6 +15,7 @@ namespace Surfapplikation.Controllers
         {
             return View();
         }
+
         [HttpGet("{lon}/{lat}")]
         public async Task<IActionResult> Search(double lon, double lat)
         {
