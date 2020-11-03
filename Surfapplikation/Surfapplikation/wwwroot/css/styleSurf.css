@@ -87,3 +87,26 @@ body {
     background-color: #4d81dd;
     border: 0;
 }
+
+
+
+/*CSS FOR SEARCHSITE*/
+
+.inputContainer {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 580px
+}
+
+.searchinput{
+    width: 200px;
+    height: 50px;
+}
+
+#SearchButton {
+    width: 20%;
+    background-color: #4d81dd;
+    border: 0;
+    cursor: pointer;
+}
