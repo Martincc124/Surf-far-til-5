@@ -5,7 +5,7 @@
 
 <fieldset class="account">
 
-    <h1>New User Registration</h1>
+    <h1>Registrer ny bruger</h1>
 
     <br />
 
@@ -13,27 +13,27 @@
         <div asp-validation-summary="All" class="input-validation-error"></div>
 
         <div class="form-group">
-            <label asp-for="EmailAddress"></label>
+            <label asp-for="EmailAddress"></label><br />
             <input type="email" asp-for="EmailAddress" class="form-control" />
             <span asp-validation-for="EmailAddress" class="field-validation-error"></span>
         </div>
 
         <div class="form-group">
-            <label asp-for="Password"></label>
+            <label asp-for="Password"></label><br />
             <input type="password" asp-for="Password" class="form-control" />
             <span asp-validation-for="Password" class="field-validation-error"></span>
         </div>
 
         <div class="form-group">
-            <label asp-for="ConfirmPassword"></label>
+            <label asp-for="ConfirmPassword"></label><br />
             <input type="password" asp-for="ConfirmPassword" class="form-control" />
             <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
         </div>
-        <br />
         <div>
-            <label>&nbsp;</label>
+            <label>&nbsp;</label><br />
             <button type="submit" class="btn btn-primary">Create new user</button>
         </div>
 
     </form>
+
 </fieldset>

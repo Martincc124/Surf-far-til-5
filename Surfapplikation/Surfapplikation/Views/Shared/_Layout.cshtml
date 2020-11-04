@@ -13,7 +13,10 @@
             <a class="navBarLink" asp-area="" asp-controller="Home" asp-action="index">Find surfspot</a>
             <a class="navBarLink" asp-area="" asp-controller="Home" asp-action="privacy">Om os</a>
             <a class="navBarLink" asp-area="" asp-controller="Search" asp-action="index">Søg på surfspot</a>
-            <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="index">Log ind</a>
+        </div>
+        <div class="navBarRight">
+                <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="login">Log ind</a>
+                <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="register">Ny bruger</a>
         </div>
     </div>
     @RenderBody()
