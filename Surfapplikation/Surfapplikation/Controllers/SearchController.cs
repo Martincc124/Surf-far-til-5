@@ -22,7 +22,7 @@ namespace Surfapplikation.Controllers
             var result = new List<Root>();
             using (var client = new HttpClient())
             {
-
+                 
                 HttpResponseMessage response = await client.GetAsync("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=" + lat + "&lon=" + lon);
 
                 string JSON = await response.Content.ReadAsStringAsync();
