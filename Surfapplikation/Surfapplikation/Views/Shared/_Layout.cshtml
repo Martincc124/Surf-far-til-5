@@ -17,11 +17,11 @@
         <div class="navBarRight">
             @if (User.Identity.IsAuthenticated)
             {
-                <form id="logout" action="@Url.Action("Logout", "Account")" method="POST">
-                    <a href="javascript: $('#logout').submit()" class="last">
+                <form id="logout" asp-controller="Account" asp-action="logout" method="POST">
+                    <button type="submit">
                         Logout
-                        <br /><span class="tagline">@User.Identity.Name</span>
-                    </a>
+                        <br /><span >@User.Identity.Name</span>
+                    </button>
                 </form>
                 <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="register">Ny bruger</a>
             }
