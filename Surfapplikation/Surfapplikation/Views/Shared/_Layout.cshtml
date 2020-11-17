@@ -11,13 +11,29 @@
     <div class="navBarWrapper">
         <div class="navBarLeft">
             <a class="navBarLink" asp-area="" asp-controller="Home" asp-action="index">Find surfspot</a>
-            <a class="navBarLink" href="">Om os</a>
+            <a class="navBarLink" asp-area="" asp-controller="Home" asp-action="privacy">Om os</a>
             <a class="navBarLink" asp-area="" asp-controller="Search" asp-action="index">Søg på surfspot</a>
         </div>
         <div class="navBarRight">
-            <a id="link" class="navBarLink" href="#">Log ind</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <form id="logout" asp-controller="Account" asp-action="logout" method="POST">
+                    <button type="submit">
+                        Logout
+                        <br /><span >@User.Identity.Name</span>
+                    </button>
+                </form>
+                <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="register">Ny bruger</a>
+            }
+            else
+            {
+                <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="login">Log ind</a>
+                <a class="navBarLink" asp-area="" asp-controller="Account" asp-action="register">Ny bruger</a>
+            }
         </div>
     </div>
     @RenderBody()
+
+    @RenderSection("Scripts", required: false);
 </body>
 </html>

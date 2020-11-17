@@ -1,9 +1,40 @@
 ﻿@{
     Layout = "_Layout";
 }
-<div class="contentWrapper">
-    <div class="inputContainer">
-        <input class="searchinput"/>
-        <button id="SearchButton">OK</button>
+
+
+    <div class="contentWrapper">
+
+
+        <div style="height: 400px; width: 600px; margin-top: 50px" id="map"></div>
+        <div class="inputContainer">
+            <input class="searchinput" />
+            <button id="SearchButton">OK</button>
+        </div>
     </div>
-</div>
+
+@section Scripts {
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs4yBn2v8H__yzpJAqQRAoC05Dj-N6LxM&callback=initMap">
+    </script>
+
+<script>
+    function initMap() {
+        // The location of Odense
+        const Odense = { lat: 55.403756, lng: 10.402370 };
+        // The map, centered at Odense
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 8,
+            center: Odense,
+        });
+        // The marker, positioned at Odense
+        const marker = new google.maps.Marker({
+            position: Odense,
+            map: map,
+        });
+    }
+
+</script>
+   
+  
+}

@@ -1,15 +1,15 @@
-﻿@model Surfapplikation.Models.LoginViewModel
+﻿@model Surfapplikation.Models.RegisterViewModel
 @{
     Layout = "_Layout";
 }
 
 <fieldset class="account">
-    
-    <h1>Log ind</h1>
+
+    <h1>Registrer ny bruger</h1>
 
     <br />
 
-    <form role="form" asp-action="Login">
+    <form role="form" asp-action="Register">
         <div asp-validation-summary="All" class="input-validation-error"></div>
 
         <div class="form-group">
@@ -25,21 +25,15 @@
         </div>
 
         <div class="form-group">
-            <label asp-for="RememberMe"></label><br />
-            <input type="checkbox" asp-for="RememberMe" />
-            <span asp-validation-for="RememberMe" class="field-validation-error"></span>
+            <label asp-for="ConfirmPassword"></label><br />
+            <input type="password" asp-for="ConfirmPassword" class="form-control" />
+            <span asp-validation-for="ConfirmPassword" class="field-validation-error"></span>
         </div>
         <div>
             <label>&nbsp;</label><br />
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Create new user</button>
         </div>
 
     </form>
-    <br />
-
-    <div class="form-group">
-        <label>Not Registered?</label>
-        <a asp-action="Register">Create a new account</a>
-    </div>
 
 </fieldset>
