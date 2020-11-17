@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Surfapplikation.Models
+namespace SurfapplikationAPI.Models
 {
     public class Root
     {
-        public string type { get; set; }
-        public Geometry geometry { get; set; }
-        public Properties properties { get; set; }
+        public List<Hour> hours { get; set; }
+        public Meta meta { get; set; }
     }
+
 }
