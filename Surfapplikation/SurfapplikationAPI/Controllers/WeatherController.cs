@@ -17,14 +17,19 @@ namespace SurfapplikationAPI.Controllers
     public class WeatherController : ControllerBase
     {
 
-        [HttpGet]
-        public async Task<IActionResult> GetWeatherData()
+        [HttpGet("{lat}/{lng}")]
+        public async Task<IActionResult> GetWeatherData(decimal lat, decimal lng)
         {
             Root weatherdata = new Root();
             using (var client = new HttpClient())
             {
                 HttpRequestMessage request = new HttpRequestMessage();
-                request.RequestUri = new Uri("https://api.stormglass.io/v2/weather/point?lat=55.403756&lng=10.402370&params=waterTemperature,airTemperature,cloudCover");
+                DateTime date = DateTime.UtcNow;
+                request.RequestUri = new Uri($"https://api.stormglass.io/v2/weather/" +
+                    $"point?lat=" + lat + "&lng=" + lng + "&" +
+                    $"params=waterTemperature,airTemperature,cloudCover&start=" + date.ToString("yyyy-MM-ddTHH\\:mm\\:ss") + "&" +
+                    $"end=" + date.ToString("yyyy-MM-ddTHH\\:mm\\:ss"));
+
                 request.Headers.Add("Authentication-Token", "ede82dc6-2014-11eb-8ea5-0242ac130002-ede82e8e-2014-11eb-8ea5-0242ac130002");
 
                 HttpResponseMessage response = await client.SendAsync(request);
@@ -35,14 +40,6 @@ namespace SurfapplikationAPI.Controllers
             }
             return Ok(weatherdata);
         }
-
-
-
-
-
-
-
-
 
         // MARtins virker ikke
         //[HttpGet]
