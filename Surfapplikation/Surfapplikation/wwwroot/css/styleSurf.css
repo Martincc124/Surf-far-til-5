@@ -93,6 +93,17 @@ body {
     color: red;
 }
 
+#logout button {
+    display:flex;
+    border: none;
+    background: none;
+    text-decoration: none;
+    margin: 40px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    color: #1d4996;
+}
+
 /*CSS FOR SEARCHSITE*/
 
 .inputContainer {
