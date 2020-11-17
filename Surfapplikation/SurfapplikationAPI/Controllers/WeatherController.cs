@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Surfapplikation.Models;
+using SurfapplikationAPI.Models;
 
 namespace SurfapplikationAPI.Controllers
 {
@@ -15,22 +16,39 @@ namespace SurfapplikationAPI.Controllers
     public class WeatherController : ControllerBase
     {
 
-        [HttpGet]
-        public async Task<IActionResult> GetWeatherData()
-        {
-            List<Root> weatherdata = new List<Root>();
-            using (var client = new HttpClient())
-            {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // MARtins virker ikke
+        //[HttpGet]
+        //public async Task<IActionResult> GetWeatherData()
+        //{
+        //    var weatherdata = new Root();
+        //    using (var client = new HttpClient())
+        //    {
+                
+        //        HttpResponseMessage response = await client.GetAsync("https://api.stormglass.io/v2/weather/point?lat=55.403756&lng=10.402370&params=waterTemperature,airTemperature,cloudCover")
               
-                HttpResponseMessage response = await client.GetAsync("https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=10&lon=20");
+        //        client.DefaultRequestHeaders.Authorization
+        //                 = new AuthenticationHeaderValue("Bearer", "d8ad9e74-28b5-11eb-8ea5-0242ac130002-d8ad9eec-28b5-11eb-8ea5-0242ac130002");
+        //        string JSON = await response.Content.ReadAsStringAsync();
 
-                string JSON = await response.Content.ReadAsStringAsync();
+        //        weatherdata = JsonConvert.DeserializeObject<Root>(JSON);
 
-                weatherdata = JsonConvert.DeserializeObject<List<Root>>(JSON);
+        //        return Ok(weatherdata);
+        //    }
 
-                return Ok(weatherdata);
-            }
-
-        }
+        //}
     }
 }
