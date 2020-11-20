@@ -2,39 +2,110 @@
     Layout = "_Layout";
 }
 
+<style>
 
-    <div class="contentWrapper">
-
-
-        <div style="height: 400px; width: 600px; margin-top: 50px" id="map"></div>
-        <div class="inputContainer">
-            <input class="searchinput" />
-            <button id="SearchButton">OK</button>
-        </div>
-    </div>
-
-@section Scripts {
-    <script defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCs4yBn2v8H__yzpJAqQRAoC05Dj-N6LxM&callback=initMap">
-    </script>
-
-<script>
-    function initMap() {
-        // The location of Odense
-        const Odense = { lat: 55.403756, lng: 10.402370 };
-        // The map, centered at Odense
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 8,
-            center: Odense,
-        });
-        // The marker, positioned at Odense
-        const marker = new google.maps.Marker({
-            position: Odense,
-            map: map,
-        });
+    #map {
+        position: absolute;
+        top: 250px;
+        bottom: 0px;
+        margin-bottom: 100px;
+        width: 500px;
+        height: 500px;
     }
 
-</script>
-   
-  
+    /* CSS is set by JS */
+    .marker {
+        display: block;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+    }
+
+    .coordinates {
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        position: absolute;
+        bottom: 40px;
+        left: 10px;
+        padding: 5px 10px;
+        margin: 0;
+        font-size: 14px;
+        line-height: 18px;
+        border-radius: 3px;
+        display: none;
+    }
+</style>
+
+
+<div class="contentWrapper">
+
+    <div id='map'></div>
+<pre id="coordinates" class="coordinates"></pre>
+
+    <div class="inputContainer">
+        <input class="searchinput" />
+        <button id="SearchButton">OK</button>
+    </div>
+</div>
+
+@section Scripts {
+
+    <script>
+        // query string to get geolocation of a city https: //eu1.locationiq.com/v1/search.php?key=pk.d36e64f7f24afa3ba6fc119b04721177&q=Odense&format=json
+
+     //Add your LocationIQ Maps Access Token here (not the API token!)
+    locationiqKey = 'pk.d36e64f7f24afa3ba6fc119b04721177';
+    //Define the map and configure the map's theme
+    var map = new mapboxgl.Map({
+        container: 'map',
+        attributionControl: false, //need this to show a compact attribution icon (i) instead of the whole text
+        style: 'https://tiles.locationiq.com/v2/streets/vector.json?key=' + locationiqKey,
+        zoom: 12,
+        center: [10.402370,55.403756]
+    });
+
+    //Add Navigation controls to the map to the top-right corner of the map
+            var nav = new mapboxgl.NavigationControl();
+            map.addControl(nav, 'top-right');
+
+
+            //Add a 'full screen' button to the map
+            map.addControl(new mapboxgl.FullscreenControl());
+            
+            //Add a Scale to the map
+            map.addControl(new mapboxgl.ScaleControl({
+                maxWidth: 80,
+                unit: 'metric' //imperial for miles
+            }));
+
+    //Marker can be style either while adding the marker using JS or separately using CSS
+
+    // First create DOM element for the marker
+    var el = document.createElement('div');
+    el.className = 'marker';
+    // Set marker properties using JS
+    el.style.backgroundImage = 'url(../../Images/Marker.png)';
+    el.style.width = '64px';
+    el.style.height = '64px';
+
+    map.on('click', function (e) {
+        // e.point is the x, y coordinates of the mousemove event relative
+        // to the top-left corner of the map
+        // e.lngLat is the longitude, latitude geographical position of the event
+
+        // Finally, create the marker where the mouse was clicked
+        var marker = new mapboxgl.Marker(el)
+            .setLngLat(e.lngLat.wrap())
+            .addTo(map);
+
+        var lngLat = marker.getLngLat();
+        coordinates.style.display = 'block';
+        coordinates.innerHTML =
+            'Latitude: ' + lngLat.lat + '<br />Longitude: ' + lngLat.lng;
+
+    });
+    </script>
+
+
 }
+
