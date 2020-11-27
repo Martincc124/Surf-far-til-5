@@ -5,10 +5,9 @@ using System.Threading.Tasks;
 
 namespace SurfapplikationAPI.Models
 {
-    public class Root
+    public class StormGlassReguest
     {
-        public List<Hour> hours { get; set; }
-        public Meta meta { get; set; }
+        decimal lat { get; set; }
+        decimal lng { get; set; }
     }
-
 }
