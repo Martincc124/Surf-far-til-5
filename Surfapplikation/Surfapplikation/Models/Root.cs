@@ -7,8 +7,8 @@ namespace Surfapplikation.Models
 {
     public class Root
     {
-        public string type { get; set; }
-        public Geometry geometry { get; set; }
-        public Properties properties { get; set; }
+        public List<Hour> hours { get; set; }
+        public Meta meta { get; set; }
     }
+
 }

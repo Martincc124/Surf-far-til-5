@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Surfapplikation.Models
 {
-    public class Next6Hours
+    public class StormGlassReguest
     {
-        public Summary summary { get; set; }
-        public Details details { get; set; }
+        decimal lat { get; set; }
+        decimal lng { get; set; }
     }
 }
