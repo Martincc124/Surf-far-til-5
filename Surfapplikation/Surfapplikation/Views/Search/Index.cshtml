@@ -60,7 +60,7 @@
         container: 'map',
         attributionControl: false, //need this to show a compact attribution icon (i) instead of the whole text
         style: 'https://tiles.locationiq.com/v2/streets/vector.json?key=' + locationiqKey,
-        zoom: 12,
+        zoom: 6,
         center: [10.402370,55.403756]
     });
 
@@ -85,8 +85,8 @@
     el.className = 'marker';
     // Set marker properties using JS
     el.style.backgroundImage = 'url(../../Images/Marker.png)';
-    el.style.width = '64px';
-    el.style.height = '64px';
+    el.style.width = '32px';
+    el.style.height = '32px';
 
     map.on('click', function (e) {
         // e.point is the x, y coordinates of the mousemove event relative
