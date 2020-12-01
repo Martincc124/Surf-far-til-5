@@ -42,6 +42,26 @@ namespace SurfapplikationAPI.Controllers
             return Ok(weatherdata);
         }
 
+        [HttpGet("{city}")]
+        public async Task<IActionResult> GetWeatherFromCity(string city)
+        {
+    
+            using (var client = new HttpClient())
+            {
+                HttpRequestMessage request = new HttpRequestMessage();
+                request.RequestUri = new Uri($"https://eu1.locationiq.com/v1/search.php?key=pk.d36e64f7f24afa3ba6fc119b04721177&q=" + city + "&format=json");
+
+                HttpResponseMessage response = await client.SendAsync(request);
+                string JSON = await response.Content.ReadAsStringAsync();
+          
+                return Ok(JSON);
+            }
+            
+        }
+
+
+        // query string to get geolocation of a city https: //eu1.locationiq.com/v1/search.php?key=pk.d36e64f7f24afa3ba6fc119b04721177&q=Odense&format=json
+
         // MARtins virker ikke
         //[HttpGet]
         //public async Task<IActionResult> GetWeatherData()
@@ -49,9 +69,9 @@ namespace SurfapplikationAPI.Controllers
         //    var weatherdata = new Root();
         //    using (var client = new HttpClient())
         //    {
-                
+
         //        HttpResponseMessage response = await client.GetAsync("https://api.stormglass.io/v2/weather/point?lat=55.403756&lng=10.402370&params=waterTemperature,airTemperature,cloudCover")
-              
+
         //        client.DefaultRequestHeaders.Authorization
         //                 = new AuthenticationHeaderValue("Bearer", "d8ad9e74-28b5-11eb-8ea5-0242ac130002-d8ad9eec-28b5-11eb-8ea5-0242ac130002");
         //        string JSON = await response.Content.ReadAsStringAsync();
