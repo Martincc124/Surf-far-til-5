@@ -12,6 +12,7 @@ using SurfapplikationAPI.Models;
 
 namespace SurfapplikationAPI.Controllers
 {
+    [ApiVersion("1.0")]
     [Route("weather")]
     [ApiController]
     public class WeatherController : ControllerBase
